@@ -98,7 +98,7 @@ public class JdbcListEntryDao implements ListEntryDao {
     }
 
     @Override
-    public ListEntry updatelistEntry(ListEntry listEntry) {
+    public ListEntry updateListEntry(ListEntry listEntry) {
         ListEntry updatedEntry = null;
         String sql = "UPDATE list_entry SET quantity = ?, cost = ? WHERE list_entry_id = ?";
         try {

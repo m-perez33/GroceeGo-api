@@ -87,7 +87,7 @@ public class ListEntry {
 
     @Override
     public String toString() {
-        //if statemtnt to print differntly depending on product category
+        //if statement to print differently depending on product category
 
         if(category == 1){
             return "ID: " + listEntryId + ". " + System.lineSeparator() +"Product: " + productName + System.lineSeparator() +

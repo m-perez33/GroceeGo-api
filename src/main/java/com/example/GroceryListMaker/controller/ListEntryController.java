@@ -50,7 +50,7 @@ public class ListEntryController {
         changedListEntry.setListEntryId(id);
 
         try {
-            return listEntryDao.updatelistEntry(changedListEntry);
+            return listEntryDao.updateListEntry(changedListEntry);
         }
         catch (DaoException e) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "DAO Error - " + e.getMessage());

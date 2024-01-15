@@ -23,6 +23,7 @@ public class JdbcGroceryListDao implements GroceryListDao{
 
     @Override
     public List<GroceryList> getGroceryLists() {
+        //Select all grocery lists. this will have be set to only select by user
         List<GroceryList> groceryLists = new ArrayList<>();
         String sql = "SELECT * FROM grocery_list";
 
@@ -41,6 +42,7 @@ public class JdbcGroceryListDao implements GroceryListDao{
 
     @Override
     public GroceryList getGroceryListById(int id) {
+
         GroceryList groceryList = null;
         String sql = "SELECT * FROM grocery_list WHERE grocery_list_id = ?";
 
@@ -58,16 +60,20 @@ public class JdbcGroceryListDao implements GroceryListDao{
 
     @Override
     public GroceryList createGrocery(GroceryList groceryList) {
+
         GroceryList newGroceryList = null;
         String sql = "INSERT INTO grocery_list (created_date) VALUES (?) RETURNING grocery_list_id";
+
         try {
             int glID = jdbcTemplate.queryForObject(sql, int.class, groceryList.getDate());
             newGroceryList = getGroceryListById(glID);
-        } catch (CannotGetJdbcConnectionException e) {
+        }
+        catch (CannotGetJdbcConnectionException e) {
             throw new DaoException("Unable to connect to server or database", e);
         } catch (DataIntegrityViolationException e) {
             throw new DaoException("Data integrity violation", e);
         }
+
         return newGroceryList;
     }
 
@@ -77,7 +83,8 @@ public class JdbcGroceryListDao implements GroceryListDao{
         String sql = "DELETE FROM grocery_list WHERE grocery_list_id = ?";
         try {
             numberOfRows = jdbcTemplate.update(sql, id);
-        } catch (CannotGetJdbcConnectionException e) {
+        }
+        catch (CannotGetJdbcConnectionException e) {
             throw new DaoException("Unable to connect to server or database", e);
         } catch (DataIntegrityViolationException e) {
             throw new DaoException("Data integrity violation", e);
@@ -86,6 +93,7 @@ public class JdbcGroceryListDao implements GroceryListDao{
     }
 
     private GroceryList mapRowToList(SqlRowSet rs){
+        //map properties from rowset to object
         GroceryList gl =new GroceryList();
         gl.setListId(rs.getInt("grocery_list_id"));
         gl.setDate(rs.getDate("created_date").toLocalDate());

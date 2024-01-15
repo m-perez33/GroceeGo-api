@@ -3,7 +3,6 @@ package com.example.GroceryListMaker.controller;
 import com.example.GroceryListMaker.dao.GroceryListDao;
 import com.example.GroceryListMaker.exception.DaoException;
 import com.example.GroceryListMaker.model.GroceryList;
-import com.example.GroceryListMaker.model.ListEntry;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -31,7 +30,7 @@ public class GroceryListController {
         }    }
 
     @RequestMapping(path = "/{id}", method = RequestMethod.GET)
-    public GroceryList getIndividualGrroceryList(@PathVariable int id) {
+    public GroceryList getIndividualGroceryList(@PathVariable int id) {
         try {
             GroceryList groceryList = groceryListDao.getGroceryListById(id);
             if (groceryList == null) {

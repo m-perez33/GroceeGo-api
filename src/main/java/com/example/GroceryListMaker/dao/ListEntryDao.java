@@ -13,7 +13,7 @@ public interface ListEntryDao {
 
     ListEntry createListEntry(ListEntry listEntry);
 
-    ListEntry updatelistEntry(ListEntry listEntry);
+    ListEntry updateListEntry(ListEntry listEntry);
 
     int deleteListEntry(int id);
 
