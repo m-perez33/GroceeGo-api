@@ -7,8 +7,6 @@ import org.springframework.jdbc.CannotGetJdbcConnectionException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
-
-import javax.sql.DataSource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +21,7 @@ public class JdbcGroceryListDao implements GroceryListDao{
 
     @Override
     public List<GroceryList> getGroceryLists() {
-        //Select all grocery lists. this will have be set to only select by user
+        // Select all grocery lists. this will have be set to only select by user
         List<GroceryList> groceryLists = new ArrayList<>();
         String sql = "SELECT * FROM grocery_list";
 
@@ -93,7 +91,7 @@ public class JdbcGroceryListDao implements GroceryListDao{
     }
 
     private GroceryList mapRowToList(SqlRowSet rs){
-        //map properties from rowset to object
+        //map properties from row set to object
         GroceryList gl =new GroceryList();
         gl.setListId(rs.getInt("grocery_list_id"));
         gl.setDate(rs.getDate("created_date").toLocalDate());

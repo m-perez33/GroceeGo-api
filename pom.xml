@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>GroceryListMaker</artifactId>
+	<artifactId>grocery-list-maker-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>GroceryListMaker</name>
 	<description>Demo project for Spring Boot</description>
