@@ -1,5 +1,7 @@
 package com.example.GroceryListMaker.model;
 
+import jakarta.validation.constraints.NotNull;
+
 public class Product {
 
     private int productId;
@@ -14,6 +16,7 @@ public class Product {
     public Product(){
 
     }
+
     public void setProductName(String productName) {
         this.productName = productName;
     }
