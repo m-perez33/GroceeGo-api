@@ -1,6 +1,6 @@
 # GroceeGo Api
 
-This is the server for the Grocery List Maker app.
+This is the server for the GroceeGo app.
 
 
 ## Back-end (Console App)
