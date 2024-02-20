@@ -16,13 +16,11 @@ This is the server for the Grocery List Maker app.
    git clone https://github.com/m-perez33/GroceeGo-api.git
 
 2. Set up database
-   * Locate sql file in resoirces.
-   * Create a database 
-   * Navigate to your database in PGadmin or another database application.
-   * update local passwprds for postgres in
-
-
-   
+   * Create a database named GroceeDB in pgAdmin or another PostgreSQL database application
+   * Navigate to your database and run query tool
+   * Select the SQL file in the in Database subfolder of project
+   * Run the query
+   * Update local username and passwords in resources > application properties
 
 Open the project in IntelliJ IDEA by choosing "Open" or "Import Project."
 
