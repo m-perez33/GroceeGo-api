@@ -1,6 +1,6 @@
-/**************************************************************************
+--**************************************************************************
 -- Step 1: Drop all database objects to start with an empty database
-**************************************************************************/
+--**************************************************************************
 DROP TABLE IF EXISTS list_entry;
 DROP TABLE IF EXISTS product;
 DROP TABLE IF EXISTS grocery_list;
@@ -20,9 +20,9 @@ DROP TABLE IF EXISTS users;
 --	zip varchar(5) NULL,
 --	CONSTRAINT PK_user PRIMARY KEY (user_id)
 --);
-/**************************************************************************
+--**************************************************************************
 -- Step 2: Create the grocery list table
-**************************************************************************/
+--**************************************************************************/
 -- Table grocery list
 CREATE TABLE grocery_list(
 	grocery_list_id serial NOT NULL,
