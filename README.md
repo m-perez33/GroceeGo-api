@@ -6,8 +6,6 @@ This is the server for the Grocery List Maker app.
 ## Back-end (Console App)
 - RESTful API for seamless communication with the console frontend
 - Database integration for persistent storage of grocery lists
-- Authentication and authorization for secure user access
-
 
 
 ### Getting Started
