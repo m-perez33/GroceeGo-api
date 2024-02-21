@@ -14,7 +14,7 @@ public class JdbcProductDaoTests extends BaseDaoTests {
 
     private static final int PRODUCT_ID = 1;
 
-    private static final String PRODUCT_NAME = "Product Name";
+    private static final String PRODUCT_NAME = "Product 1";
 
     private JdbcProductDao jdbcProductDao;
 
@@ -32,7 +32,7 @@ public class JdbcProductDaoTests extends BaseDaoTests {
         // Step One: Replace Assert.fail("Test not implemented.")
         // Assert.fail("Test not implemented.");
 
-        // Arrange - create an instance of Madge's first Sale object
+        // Arrange - create an instance of product's
         Product product = mapValuesToProduct(PRODUCT_ID, PRODUCT_NAME);
 
         // Act - retrieve Madge's first sale
@@ -41,8 +41,10 @@ public class JdbcProductDaoTests extends BaseDaoTests {
 
         // Assert - retrieved sale is not null and matches expected sale
         //assertProductsMatch("getProductById(" + );
+        System.out.println(product.getProductName());
+        System.out.println(retrievedProduct.getProductName());
         Assert.assertNotNull("getProductById(" + PRODUCT_ID + ") returned null", retrievedProduct);
-        assertProductsMatch("getProductById(" + PRODUCT_ID + ") returned wrong or partial data", product, retrievedProduct);
+        assertProductsMatch( product, retrievedProduct);
     }
 
     private static Product mapValuesToProduct(int productId, String name){
@@ -53,10 +55,11 @@ public class JdbcProductDaoTests extends BaseDaoTests {
         return product;
     }
 
-    private void assertProductsMatch(String message, Product expected, Product actual){
-
-        Assertions.assertEquals(message, expected.getProductName(), actual.getProductName());
-       // Assertions.assertEquals(message, expected.getProductId(), actual.getProductId());
+    private void assertProductsMatch( Product expected, Product actual){
+        System.out.println(expected.getProductName());
+        System.out.println(expected.getProductName());
+        Assertions.assertEquals(expected.getProductId(), actual.getProductId());
+        Assertions.assertEquals( expected.getProductName(), actual.getProductName());
     }
 
 }

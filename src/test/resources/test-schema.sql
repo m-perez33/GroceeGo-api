@@ -26,10 +26,10 @@ DROP TABLE IF EXISTS users;
 -- Table grocery list
 CREATE TABLE grocery_list(
 	grocery_list_id serial NOT NULL,
-	user_id int NULL,--make not null later
+	--user_id int NULL,--make not null later
     created_date DATE NOT NULL DEFAULT CURRENT_DATE,
-	CONSTRAINT PK_grocery_list PRIMARY KEY (grocery_list_id),
-	CONSTRAINT FK_user FOREIGN KEY (user_id) REFERENCES users(user_id)
+	CONSTRAINT PK_grocery_list PRIMARY KEY (grocery_list_id)
+	--CONSTRAINT FK_user FOREIGN KEY (user_id) REFERENCES users(user_id)
 
 );
 
