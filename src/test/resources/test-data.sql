@@ -9,7 +9,7 @@ INSERT INTO product (name) VALUES
 	('Product 3'),
 	('Product 4');
 
---Insert int list_entry
+--Insert into list_entry
 INSERT INTO list_entry (quantity, cost, grocery_list_id, product_id, category) VALUES
 	('3', '2.5', (Select grocery_list_id from grocery_list), (Select product_id from product where name = 'Product 1'), '1'),
 	('2', '3', (Select grocery_list_id from grocery_list), (Select product_id from product where name = 'Product 2'), '2'),
