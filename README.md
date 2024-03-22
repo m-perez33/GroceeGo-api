@@ -14,7 +14,7 @@ This is the server for the GroceeGo app.
    git clone https://github.com/m-perez33/GroceeGo-api.git
 
 2. Set up database
-   * Create a database named GroceeDB in pgAdmin or another PostgreSQL database application
+   * Create a database named GroceryListDB in pgAdmin or another PostgreSQL database application
    * Navigate to your database and run query tool
    * Select the SQL file in the in Database subfolder of project
    * Run the query

@@ -35,6 +35,8 @@ public class ListEntryController {
     @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(path = "", method = RequestMethod.POST)
     public ListEntry saveListEntry(@Valid @RequestBody ListEntry incomingEntry) {
+
+
         try {
             return listEntryDao.createListEntry(incomingEntry);
         }
