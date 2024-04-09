@@ -118,6 +118,8 @@ public class JdbcListEntryDao implements ListEntryDao {
 
     @Override
     public int deleteListEntry(int id) {
+
+
         int numberOfRows = 0;
         String sql = "DELETE FROM list_entry WHERE list_entry_id = ?";
         try {

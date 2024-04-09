@@ -10,6 +10,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api/listEntry")
 public class ListEntryController {
@@ -29,7 +30,7 @@ public class ListEntryController {
 
     @RequestMapping(path = "/list/{id}", method = RequestMethod.GET)
     public List<ListEntry> getByList(@PathVariable int id){
-        return listEntryDao.getListEntriesByListId( id);
+        return listEntryDao.getListEntriesByListId(id);
     }
 
     @ResponseStatus(HttpStatus.CREATED)

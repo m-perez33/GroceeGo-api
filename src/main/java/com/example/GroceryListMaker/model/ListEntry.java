@@ -81,7 +81,7 @@ public class ListEntry {
         return cost;
     }
 
-    public double getTotal(){
+    /*public double getTotal(){
         return cost * quantity;
     }
 
@@ -103,7 +103,7 @@ public class ListEntry {
         }
 
 
-    }
+    }*/
 }
 
 

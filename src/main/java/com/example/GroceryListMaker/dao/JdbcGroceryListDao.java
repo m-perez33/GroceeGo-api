@@ -2,6 +2,7 @@ package com.example.GroceryListMaker.dao;
 
 import com.example.GroceryListMaker.exception.DaoException;
 import com.example.GroceryListMaker.model.GroceryList;
+import com.example.GroceryListMaker.model.ListEntry;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.jdbc.CannotGetJdbcConnectionException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -77,6 +78,10 @@ public class JdbcGroceryListDao implements GroceryListDao{
 
     @Override
     public int deleteGroceryList(int id) {
+        List<ListEntry> listEntries = new ArrayList<>();
+
+
+
         int numberOfRows = 0;
         String sql = "DELETE FROM grocery_list WHERE grocery_list_id = ?";
         try {

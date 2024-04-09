@@ -1,6 +1,7 @@
 package com.example.GroceryListMaker.controller;
 
 import com.example.GroceryListMaker.dao.GroceryListDao;
+import com.example.GroceryListMaker.dao.ListEntryDao;
 import com.example.GroceryListMaker.exception.DaoException;
 import com.example.GroceryListMaker.model.GroceryList;
 import jakarta.validation.Valid;
@@ -11,6 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api/GroceryLists")
 public class GroceryListController {
@@ -60,6 +62,8 @@ public class GroceryListController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @RequestMapping(path = "/{id}", method = RequestMethod.DELETE)
     public void deleteExistingGroceryList(@PathVariable int id) {
+
+
         try {
             int cardsDeleted = groceryListDao.deleteGroceryList(id);
             if (cardsDeleted == 0) {
