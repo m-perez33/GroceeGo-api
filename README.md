@@ -1,10 +1,10 @@
 # GroceeGo Api
 
-This is the server for the GroceeGo app.
+This is the api for the GroceeGo app.
 
 
-## Back-end (Console App)
-- RESTful API for seamless communication with the console frontend
+## Back-end
+- RESTful API for seamless communication with the Vue.js frontend
 - Database integration for persistent storage of grocery lists
 
 
@@ -26,3 +26,4 @@ Locate the main class of the API.
 
 Right-click on the main class file and select "Run" to execute the application. 
 
+Go to the  [GroceeGo-vue](https://github.com/m-perez33/GroceeGo-vue) repo for instructions on running the frontend.
