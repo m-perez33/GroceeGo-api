@@ -26,4 +26,4 @@ Locate the main class of the API.
 
 Right-click on the main class file and select "Run" to execute the application. 
 
-Go to the  [GroceeGo-vue](https://github.com/m-perez33/GroceeGo-vue) repo for instructions on running the frontend.
+Go to the  [GroceeGo-vue](https://github.com/m-perez33/GroceeGo-vue) repo for instructions on running the front-git end.
